@@ -29,9 +29,7 @@
     </div>
     <div data-role="content">
         <div id="Nuevas" data-role="fieldcontain">
-            <fieldset data-role="controlgroup" data-type="vertical">
-               
-            </fieldset>
+            
         </div>
         <ul data-role="listview" data-divider-theme="a" data-inset="true" >
             <li data-role="list-divider" role="heading">
@@ -39,9 +37,7 @@
             </li>
         </ul>
          <div id="Completadas" data-role="fieldcontain">
-            <fieldset data-role="controlgroup" data-type="vertical">
-               
-            </fieldset>
+          
         </div>
     </div>
 </div>
@@ -51,87 +47,32 @@
 		<ul data-role="listview" data-inset="true" data-dividertheme="a">
         <li data-role="list-divider" >Nueva Nota</li>
         <li><input type="text" id="regTitulo" placeholder="Titulo"/></li>
-        <li style="height:150px"> <textarea name="" id="regDescrip" placeholder="Descripcion" cols="15" rows="100" ></textarea></li>
+        <li style="height:150px"> <textarea name="" id="regDescrip" placeholder="Descripcion" cols="25" rows="25" ></textarea></li>
         <li><a href="#" id="regFoto">Tomar Foto </a></li>
         </ul>		
         <a href="#" data-role="button" id="regEnviar" data-theme="a">Guardar</a>
 	</div>	
 </div>
 
-<div data-role="page" id="historial">
-    <div data-role="header">
-    <h1>Historial</h1>
-    <a data-role="button" data-rel="back" data-direction="reverse">Atras</a>
-    </div>
-    <div data-role="content">
-    
-    </div>
-     <div  data-role="footer" data-position="fixed">
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a href="#nosotros" data-transition="pop" data-icon="info">
-                        Nosotros
-                    </a>
-                </li>
-                <li>
-                    <a href="#nr1" data-transition="fade" data-icon="grid">
-                        Reservar
-                    </a>
-                </li>
-                <li>
-                    <a href="#priv" data-transition="flip" data-icon="star">
-                        Privacidad
-                    </a>
-                </li>
-            </ul>
+<div data-role="page" id="Ver">
+	<div data-role="content">	
+		<ul data-role="listview" data-inset="true" data-dividertheme="a">
+        <li data-role="list-divider" >Ver Nota</li>
+        <li><input type="text" id="regTitulo" placeholder="Titulo"/></li>
+        <li style="height:150px"> <textarea name="" id="regDescrip" placeholder="Descripcion" cols="25" rows="25" ></textarea></li>
+        <li><a href="#" id="regFoto">Tomar Foto </a></li>
+        </ul>		
+        <a href="#" data-role="button" id="regEnviar" data-theme="a">Aceptar</a>
+	</div>	
+</div>
+<div data-role="page" id="Revisa">
+	<div data-role="content">	
+		
+         <a data-role="button" href="#Nuevo" class="ui-btn-right">
+            Aceptar
+        </a>
         </div>
-    </div>
-</div>
-<div data-role="page" id="nr1">
-	<div data-role="header">
-		<h1>Nueva Reserva</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview" data-inset="true" data-dividertheme="a">
-        <li data-role="list-divider" >Tipo de Habitación</li>
-        <li><a href="#">Habitación Sencilla</a></li>
-        <li><a href="#">Habitacion Doble</a></li>
-        <li><a hidden="#">Suite</a></li>
-        </ul>		
-      </div>	
-</div>
-<div data-role="page" id="nr2">
-	<div data-role="header">
-		<h1>Nueva Reserva</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview" data-inset="true" data-dividertheme="a">
-        <li data-role="list-divider" >Datos de Reserva</li>
-        <li>Personas:<br/><select >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        </select></li>
-        <li>Habitaciones:<br/><select >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        </select></li>
-        <li>Dias:<br/><select >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        </select></li>
-        </ul>		
-        <a href="#" data-role="button" data-theme="a">Reservar</a>
-      </div>	
+	</div>	
 </div>
 </body>
 </html>

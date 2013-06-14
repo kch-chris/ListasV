@@ -22,52 +22,36 @@ $(document).ready(function(){
 				}
 		});
 	
-	$('#nr1 li').tap(function(){
+	$('#Completadas input[type="checkbox"]').tap(function(){
 			if($(this).index()!=0){
-				switch($(this).index())
-				{
-					case 1:
-						$('#nr2').attr('th',1);
-						break
-					case 2:
-						$('#nr2').attr('th',2);
-						break
-					case 3:
-						$('#nr2').attr('th',3);
-						break
-					}
-					window.location.href='#nr2';
+				var ind=$(this).index();
+				var id_tarea=$(this).val();
+					 if($(this).not(':checked')) {  
+          			 activaTarea (id_tarea); 	
+					 }
+					else 
+					{
+						leerTarea(id_tarea);
+						} 
+				
+            
 				}
 			}
 		);
 		
-		$('#nr2 a[data-role=button]').tap(function(){
-			var th =$('#nr2').attr('th');	
-			var pr =$('#nr2 select:eq(0)').val();
-			var hb =$('#nr2 select:eq(1)').val();
-			var ds =$('#nr2 select:eq(2)').val();
-			if(navigator.connection.type!=Connection.NONE)
-			{
-				reservarHB(th,pr,hb,ds);
-				}
-			else
-			{
-				reservaInt(th,pr,hb,ds);
-				}
-		  }
-		);
-		$('#page li:eq(1)').tap(
-		function(){
-			leerHistorial();
-			}
-		 );
-		 if($("#Alta").is(':checked')) {  
-          
+		$('#Nuevas input[type="checkbox"]').tap(function(){
+			if($(this).index()!=0){
+				var ind=$(this).index();
+				var id_tarea=$(this).val();
+					 if($(this).is(':checked')) { 
+					 cancelaTarea (id_tarea); 
+					 }
             
-            } 
-		else {
-			
+				}
 			}
+		);
+		
+			
 		},false);
 	});
 	
