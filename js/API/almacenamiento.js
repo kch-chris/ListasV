@@ -23,11 +23,9 @@ function accesoBD ()
 	return db;
 	}
 
-function EnviarTarea (titulo,descripcion,foto)
+function EnviarTarea(titulo,descripcion,foto)
 {
 	accesoBD().trasaction(function(tx) {
-		//var f= new Date();
-		//var fecha= f.getDate()+'/'+(f.getMonth()+1)+'/'+f.getFullYear();
 		 tx.executeSql('CREATE TABLE IF NOT EXISTS Tareas (id unique, Titulo, Descripcion, Foto,Estado)');
 		 tx.executeSql('INSERT INTO Tareas (Titulo, Descripcion,Foto,Estado) VALUES ("'+titulo+'", "'+descripcion+'","'+foto+'","1")');
 		  },function(err){
@@ -89,10 +87,10 @@ function leerCompletas() {
 				$('#Completadas div[data-role=fieldcontain]').append('</fieldset>');
 				}
 			},function(err){
-				alert(err.code);
+				alert("Error al procesar SQL: "+err.code);
 				});
 		},function(err){
-			alert(err.code);
+			alert("Error al conectar: "+err.code);
 			},
 	null
 	/*function(){
@@ -149,10 +147,10 @@ function leerTarea(id_tarea) {
 				$('#Revisa div[data-role=fieldcontain]').append('</ul>');
 				}
 			},function(err){
-				alert(err.code);
+				alert("Error al procesar SQL: "+err.code);
 				});
 		},function(err){
-			alert(err.code);
+			alert("Error al conectar: "+err.code);
 			},
 	null
 	/*function(){
