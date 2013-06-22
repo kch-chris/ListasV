@@ -60,7 +60,7 @@ function leerTareas()
 				$('#Nuevas div[data-role=fieldcontain]').append('</fieldset>');
 				}
 			},function(err){
-				alert("Error al procesar SQL: "+err.code);
+				alert("No hay tareas");
 				});
 		},function(err){
 			alert("Error al conectar: "+err.code);
@@ -88,9 +88,9 @@ function leerCompletas() {
 					}
 				$('#Completadas div[data-role=fieldcontain]').append('</fieldset>');
 				}
-			},function(err){
-				alert("Error al procesar SQL: "+err.code);
-				});
+			},null/*function(err){
+				alert("Error al procesar SQL: ");
+				}*/);
 		},function(err){
 			alert("Error al conectar: "+err.code);
 			},
@@ -126,6 +126,8 @@ function activaTarea (id_tarea)
 	function (){
 		navigator.notification.alert('Tarea Terminada',function(){
 			window.location.href='#page1';
+			leerTareas();
+			leerCompletas();
 			},'Datos Guardados','Aceptar');
 		}
 	);
