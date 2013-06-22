@@ -26,7 +26,6 @@ function accesoBD ()
 function EnviarTarea(titulo,descripcion,foto)
 {
 	var estado=1;
-	alert(titulo+descripcion+foto+estado);
 	accesoBD().trasaction(function(tx) {
 		 tx.executeSql('CREATE TABLE IF NOT EXISTS Tareas (id unique, Titulo, Descripcion, Foto, Estado)');
 		 tx.executeSql('INSERT INTO Tareas (Titulo, Descripcion, Foto, Estado) VALUES ("'+titulo+'", "'+descripcion+'", "'+foto+'", "'+estado+'")');
