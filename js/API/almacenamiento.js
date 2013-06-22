@@ -103,7 +103,7 @@ function leerCompletas() {
 	
 function cancelaTarea (id_tarea)
 {
-	accesoBD().trasaction(function(tx) {
+	accesoBD().transaction(function(tx) {
 		 tx.executeSql('UPDATE Tareas set Estado="0" where id="'+id_tarea+'"');
 		  },function(err){
 		navigator.notification.alert(err.code,null,'Error','Aceptar');
@@ -118,7 +118,7 @@ function cancelaTarea (id_tarea)
 	
 function activaTarea (id_tarea)
 {
-	accesoBD().trasaction(function(tx) {
+	accesoBD().transaction(function(tx) {
 		 tx.executeSql('UPDATE Tareas set Estado="1" where id="'+id_tarea+'"');
 		  },function(err){
 		navigator.notification.alert(err.code,null,'Error','Aceptar');
