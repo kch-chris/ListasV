@@ -30,7 +30,7 @@ function EnviarTarea(titulo,descripcion,foto)
 		 tx.executeSql('CREATE TABLE IF NOT EXISTS Tareas (id unique, Titulo, Descripcion, Foto, Estado)');
 		 tx.executeSql('INSERT INTO Tareas (Titulo, Descripcion, Foto, Estado) VALUES ("'+titulo+'", "'+descripcion+'", "'+foto+'", "'+estado+'")');
 		  },function(err){
-		navigator.notification.alert(err.code,null,'Error','Aceptar');
+		alert(err.code);
 		},
 	function(){
 		navigator.notification.alert('Tarea Agregada',function(){
