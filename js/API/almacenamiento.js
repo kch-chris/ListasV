@@ -36,6 +36,8 @@ function EnviarTarea(titulo,descripcion,foto)
 	function(){
 		navigator.notification.alert('Tarea Agregada',function(){
 			window.location.href='#page1';
+			leerTareas();
+			leerCompletas();
 			},'Datos Guardados','Aceptar');
 		}
 	);
@@ -88,9 +90,9 @@ function leerCompletas() {
 					}
 				$('#Completadas div[data-role=fieldcontain]').append('</fieldset>');
 				}
-			},null/*function(err){
-				alert("Error al procesar SQL: ");
-				}*/);
+			},function(err){
+				alert("0 completadas: ");
+				});
 		},function(err){
 			alert("Error al conectar: "+err.code);
 			},
@@ -126,8 +128,6 @@ function activaTarea (id_tarea)
 	function (){
 		navigator.notification.alert('Tarea Terminada',function(){
 			window.location.href='#page1';
-			leerTareas();
-			leerCompletas();
 			},'Datos Guardados','Aceptar');
 		}
 	);
