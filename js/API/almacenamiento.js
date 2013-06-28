@@ -35,9 +35,10 @@ function EnviarTarea(titulo,descripcion,foto)
 		},
 	function(){
 		navigator.notification.alert('Tarea Agregada',function(){
-			leerTareas();
-			leerCompletas();
+			//leerTareas();
+			//leerCompletas();
 			window.location.href='#page1';
+			window.location.reload();
 			},'Datos Guardados','Aceptar');
 		}
 	);
