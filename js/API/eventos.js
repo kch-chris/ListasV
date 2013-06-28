@@ -5,13 +5,8 @@ $(document).ready(function(){
 	$('#page1').focus(function() {
 	leerTareas();
 	leerCompletas();
-	alert('1');
 	});
-	$('#page1').on( "pageshow", function( event, ui ) {
- 	leerTareas();
-	leerCompletas();
-		alert('2');
-});
+
 		
 	$('#regFoto').tap(function() {
 	tomarFoto();
