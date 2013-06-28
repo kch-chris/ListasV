@@ -56,7 +56,7 @@ function leerTareas()
 			   for(i=0;i<largo;i++)
 				{
 					alert('entro leer');
-					$('#chk_new div[data-role=controlgroup]').append('<input id="checkbox'+resultado.rows.item(i).id+'" name="checkbox'+resultado.rows.item(i).id+'" data-theme="c" type="checkbox" value="'+resultado.rows.item(i).id+'">'+
+					$('#chk_new fieldset[data-role=controlgroup]').append('<input id="checkbox'+resultado.rows.item(i).id+'" name="checkbox'+resultado.rows.item(i).id+'" data-theme="c" type="checkbox" value="'+resultado.rows.item(i).id+'">'+
                  '<label for="checkbox'+resultado.rows.item(i).id+'">'+
                     resultado.rows.item(i).Titulo+
                 '</label>');
