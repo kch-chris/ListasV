@@ -1,8 +1,15 @@
 // Eventos
 $(document).ready(function(){
 	document.addEventListener("deviceready",function(){
+	
+	$('#page1').focus(function() {
 	leerTareas();
 	leerCompletas();
+	});
+	$('#page1').on( "pageshow", function( event, ui ) {
+ 	leerTareas();
+	leerCompletas();
+});
 		
 	$('#regFoto').tap(function() {
 	tomarFoto();
