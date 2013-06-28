@@ -51,9 +51,8 @@ function leerTareas()
 		tx.executeSql('Select * from Tareas where Estado="1"',[],function(tx1,resultado){
 			var largo=resultado.rows.length;
 			if(largo!=0){
-				$('#Nuevas div[data-role=fieldcontain]').html('');
-				$('#Nuevas div[data-role=fieldcontain]').append('<fieldset data-role="controlgroup" data-type="vertical" id="chk_new"> </fieldset>');
-			   for(i=0;i<largo;i++)
+				$('#chk_new fieldset[data-role=controlgroup]').html('');
+				for(i=0;i<largo;i++)
 				{
 					alert('entro leer');
 					$('#chk_new fieldset[data-role=controlgroup]').append('<input id="checkbox'+resultado.rows.item(i).id+'" name="checkbox'+resultado.rows.item(i).id+'" data-theme="c" type="checkbox" value="'+resultado.rows.item(i).id+'">'+
