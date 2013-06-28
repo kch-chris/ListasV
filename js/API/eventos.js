@@ -1,12 +1,6 @@
 // Eventos
 $(document).ready(function(){
 	document.addEventListener("deviceready",function(){
-	
-	$('#page1').focus(function() {
-	leerTareas();
-	leerCompletas();
-	});
-
 		
 	$('#regFoto').tap(function() {
 	tomarFoto();
@@ -57,5 +51,10 @@ $(document).ready(function(){
 		
 			
 		},false);
+		
+	$('#page1').focus(function() {
+	leerTareas();
+	leerCompletas();
+	});
 	});
 	
