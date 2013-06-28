@@ -55,6 +55,7 @@ function leerTareas()
 				$('#Nuevas div[data-role=fieldcontain]').append('<fieldset data-role="controlgroup" data-type="vertical">');
                for(i=0;i<largo;i++)
 				{
+					alert('entro leer');
 					$('#Nuevas div[data-role=fieldcontain]').append('<input id="checkbox'+resultado.rows.item(i).id+'" name="checkbox'+resultado.rows.item(i).id+'" data-theme="c" type="checkbox" value="'+resultado.rows.item(i).id+'">'+
                  '<label for="checkbox'+resultado.rows.item(i).id+'">'+
                     resultado.rows.item(i).Titulo+
@@ -84,6 +85,7 @@ function leerCompletas() {
 				$('#Completadas div[data-role=fieldcontain]').append('<fieldset data-role="controlgroup" data-type="vertical">');
 				for(i=0;i<largo;i++)
 				{
+					alert('entro completas');
 					$('#Completadas div[data-role=fieldcontain]').append('<input id="checkboxc'+resultado.rows.item(i).id+'" name="checkboxc'+resultado.rows.item(i).id+'" data-theme="c" type="checkbox" value="'+resultado.rows.item(i).id+'">'+
                  '<label for="checkboxc'+resultado.rows.item(i).id+'"  style="text-decoration: line-through;">'+
                     resultado.rows.item(i).Titulo+
